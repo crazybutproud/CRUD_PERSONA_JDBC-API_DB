@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All people</title>
+</head>
+<body>
+<p>All people</p>
+<div th:each ="person:${personas}">
+    <a th:href="@{'/people/'+${person.id}}" >[[${person.name}]]  [[${person.age}]]</a>
+    <br>
+</div>
+<br>
+<hr>
+<a href="/people/new">Create a new person</a>
+</body>
+</html>
